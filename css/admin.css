@@ -1,0 +1,35 @@
+#pts_sbtn {
+	margin-left: 3px;
+	}
+	#pts_sbtn .fa {
+		color: #888888;
+	}
+
+#pts_formtable {
+	width: 100%;
+	}
+	#pts_formtable .pts_cellname {
+		width: 40%;
+	}
+	#pts_formtable .pts_celloption {
+		width: 60%;
+	}
+
+	#pts_formtable .pts_divider {
+		margin: 15px 0;
+	}
+	#pts_formtable .pts_subheader {
+		margin-top: 0;
+	}
+	#pts_formtable .pts_paragraph {
+		margin-top: -10px;
+		padding: 0;
+	}
+
+	#pts_formtable .button-primary,
+	#pts_formtable .button-default {
+		margin-top: 20px;
+		}
+		#pts_formtable .button-default {
+			margin-left: 15px;
+		}
