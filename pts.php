@@ -3,7 +3,7 @@
  * Plugin Name: Pricing Table Shortcode
  * Plugin URI: https://wordpress.org/plugins/pricing-tables-shortcode/
  * Description: A pricing table plugin, that sells.
- * Version: 1.0
+ * Version: 1.1
  * Author: Yusri Mathews
  * Author URI: http://yusrimathews.co.za/
  * License: GPLv2 or later
@@ -88,7 +88,7 @@ function pts_scripts_admin(){
 	wp_enqueue_style( 'pts-menu-css', plugin_dir_url( __FILE__ ) . 'css/menu.min.css', array( 'pts-font-awesome' ) );
 
 	if( get_post_type( get_the_ID() ) == 'page' ){
-		wp_enqueue_style( 'pts-admin-css', plugin_dir_url( __FILE__ ) . 'css/admin.min.css' );
+		wp_enqueue_style( 'pts-admin-css', plugin_dir_url( __FILE__ ) . 'css/admin.min.css', array( 'pts-font-awesome' ) );
 		wp_enqueue_script( 'pts-admin-js', plugin_dir_url( __FILE__ ) . 'js/admin.min.js', array( 'jquery' ) );
 	}
 
@@ -181,6 +181,8 @@ function pts_shortcode( $atts ){
 					}
 				endwhile;
 
+				wp_reset_query();
+
 			} elseif( $layoutStyle == 'modern' ){
 
 				$minHeight = ( isset( $atts['minheight'] ) ? $atts['minheight'] : '0' );
@@ -260,6 +262,8 @@ function pts_shortcode( $atts ){
 						$shortcodeOutput .= '</div>';
 					}
 				endwhile;
+
+				wp_reset_query();
 
 			} else {
 				$shortcodeOutput .= '<p>Something is wrong with your Pricing Table shortcode. Please use our built in shortcode generator to assist you.</p>';
