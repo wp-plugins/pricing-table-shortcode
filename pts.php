@@ -3,7 +3,7 @@
  * Plugin Name: Pricing Table Shortcode
  * Plugin URI: https://wordpress.org/plugins/pricing-tables-shortcode/
  * Description: A pricing table plugin, that sells.
- * Version: 1.1
+ * Version: 1.2
  * Author: Yusri Mathews
  * Author URI: http://yusrimathews.co.za/
  * License: GPLv2 or later
@@ -30,7 +30,7 @@ function pts_activation(){
 	global $current_user;
 	$user_id = $current_user->ID;
 
-	update_user_meta( $user_id, 'pts_plugin_activation', date( 'F j, Y' ), true );
+	update_user_meta( $user_id, 'pts_plugin_activation', date( 'F j, Y' ) );
 	update_user_meta( $user_id, 'pts_rate_ignore', 'false' );
 	update_user_meta( $user_id, 'pts_donate_ignore', 'false' );
 }

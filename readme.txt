@@ -47,6 +47,9 @@ You can add custom CSS through your theme, or child theme and it should overwrit
 
 == Changelog ==
 
+= 1.2 =
+* Updated notices logic.
+
 = 1.1 =
 * Fixed continuous loop issue.
 
